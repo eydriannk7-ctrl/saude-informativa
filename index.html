@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Saúde Informativa</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Saúde Informativa</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Saúde Informativa</h1>
-
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="virus.html">Doenças Virais</a>
-        <a href="mental.html">Saúde Mental</a>
-    </nav>
-
-    <div class="controls">
-        <input type="text" id="searchInput" placeholder="Pesquisar...">
-        <button onclick="searchContent()">Buscar</button>
-        <button onclick="toggleDarkMode()">🌙</button>
-    </div>
+  <h1>Portal Saúde Informativa</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="virais.html">Doenças Virais</a>
+    <a href="mentais.html">Saúde Mental</a>
+    <button onclick="toggleDark()">Modo Escuro</button>
+  </nav>
 </header>
 
-<section class="searchable">
-    <h2>Bem-vindo</h2>
-    <p>Este site tem como objetivo fornecer informações claras e educativas sobre doenças virais e doenças mentais.</p>
-    <p>Informação correta é fundamental para prevenção, tratamento adequado e combate ao preconceito.</p>
+<section class="banner">
+  <h2>Informação confiável sobre saúde</h2>
+  <p>Conteúdo educativo sobre doenças virais e saúde mental</p>
 </section>
 
+<div class="container">
+
+  <div class="card">
+    <h3>Doenças Virais</h3>
+    <p>Informações sobre infecções transmitidas por vírus.</p>
+    <a href="virais.html"><button>Ver mais</button></a>
+  </div>
+
+  <div class="card">
+    <h3>Saúde Mental</h3>
+    <p>Conheça transtornos mentais e formas de cuidado.</p>
+    <a href="mentais.html"><button>Ver mais</button></a>
+  </div>
+
+</div>
+
 <footer>
-    <p>Site educativo • Utilize fontes oficiais de saúde</p>
+Portal Saúde Informativa - Conteúdo Educativo
 </footer>
 
 <script src="script.js"></script>
