@@ -1,132 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Saúde Informativa</title>
-
-<style>
-:root{
-  --primary:#1e3a8a;
-  --secondary:#2563eb;
-  --bg:#f4f6f8;
-  --card:#ffffff;
-  --text:#111827;
-}
-
-.dark{
-  --bg:#111827;
-  --card:#1f2937;
-  --text:#f1f5f9;
-}
-
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  transition:0.3s;
-}
-
-header{
-  background:var(--primary);
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-nav{
-  background:var(--secondary);
-  text-align:center;
-  padding:10px;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 15px;
-  font-weight:bold;
-}
-
-nav button{
-  padding:8px 15px;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
-
-.card{
-  background:var(--card);
-  padding:15px;
-  margin-bottom:15px;
-  border-radius:8px;
-  box-shadow:0 0 8px rgba(0,0,0,0.08);
-}
-
-footer{
-  background:var(--primary);
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Saúde</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h1>Portal Saúde Informativa</h1>
-  <p>Informações educativas sobre saúde</p>
+    <h1>Portal Saúde</h1>
+    <button id="darkModeToggle">🌙</button>
 </header>
 
-<nav>
-  <a href="index.html">Início</a>
-  <a href="doencas.html">Doenças</a>
-  <button onclick="toggleDark()">Modo Escuro</button>
-</nav>
+<main>
+    <section class="card">
+        <h2>Contato de Profissionais da Saúde</h2>
 
-<div class="container">
+        <div class="profissional">
+            <h3>Clínico Geral</h3>
+            <p>📞 (11) 99999-0001</p>
+        </div>
 
-<h2>Bem-vindo</h2>
-<div class="card">
-<p>Este portal foi criado para fornecer informações educativas sobre doenças virais e saúde mental.</p>
-</div>
+        <div class="profissional">
+            <h3>Psicólogo</h3>
+            <p>📞 (11) 99999-0002</p>
+        </div>
 
-<h2>Contatos de Profissionais da Saúde</h2>
+        <div class="profissional">
+            <h3>Cardiologista</h3>
+            <p>📞 (11) 99999-0003</p>
+        </div>
 
-<div class="card">
-<h3>Hospital Geral Central</h3>
-<p>Telefone: (11) 4000-1000</p>
-</div>
+        <div class="profissional">
+            <h3>Emergência</h3>
+            <p>📞 192</p>
+        </div>
 
-<div class="card">
-<h3>Clínica de Saúde Mental Vida</h3>
-<p>Telefone: (11) 4000-2000</p>
-</div>
-
-<div class="card">
-<h3>Emergência SAMU</h3>
-<p>Telefone: 192</p>
-</div>
-
-</div>
+    </section>
+</main>
 
 <footer>
-Portal Saúde Informativa - Conteúdo Educativo
+    <p>© 2026 Portal Saúde - Todos os direitos reservados</p>
 </footer>
 
-<script>
-function toggleDark(){
-  document.body.classList.toggle("dark");
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

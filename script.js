@@ -1,13 +1,11 @@
-function toggleDark(){
-  document.body.classList.toggle("dark");
-}
+const toggle = document.getElementById("darkModeToggle");
 
-function searchCards(){
-  let input = document.getElementById("search").value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-  cards.forEach(card=>{
-    let text = card.innerText.toLowerCase();
-    card.style.display = text.includes(input) ? "block" : "none";
-  });
-}
+    if(document.body.classList.contains("dark")){
+        toggle.textContent = "☀️";
+    } else {
+        toggle.textContent = "🌙";
+    }
+});
