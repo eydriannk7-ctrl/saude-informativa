@@ -10,21 +10,29 @@
 
 <header>
     <h1>Saúde Informativa</h1>
+    
     <nav>
         <a href="index.html">Início</a>
         <a href="virus.html">Doenças Virais</a>
         <a href="mental.html">Saúde Mental</a>
     </nav>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
+        <button onclick="searchContent()">Buscar</button>
+        <button onclick="toggleDarkMode()">🌙</button>
+    </div>
 </header>
 
-<section class="hero">
+<section class="hero searchable">
     <h2>Informação é prevenção</h2>
-    <p>Este site tem como objetivo informar sobre doenças transmitidas por vírus e doenças mentais, promovendo conhecimento e conscientização.</p>
+    <p>Este site tem como objetivo informar sobre doenças transmitidas por vírus e doenças mentais.</p>
 </section>
 
 <footer>
     <p>Site educativo • Fontes confiáveis de saúde pública</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
