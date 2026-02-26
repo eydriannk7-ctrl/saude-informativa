@@ -57,13 +57,6 @@ nav a:hover{
   color:var(--accent);
 }
 
-.banner{
-  margin-top:140px;
-  background:linear-gradient(to right,#0ea5e9,#2563eb);
-  color:white;
-  padding:60px 20px;
-  text-align:center;
-}
 
 .container{
   max-width:1100px;

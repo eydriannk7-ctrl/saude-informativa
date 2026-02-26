@@ -6,36 +6,92 @@
 <title>Portal Saúde Informativa</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Portal Saúde Informativa</h1>
   <nav>
-    <a href="index.html">Início</a>
-    <a href="virais.html">Doenças Virais</a>
-    <a href="mentais.html">Saúde Mental</a>
+    <a href="#virais">Doenças Virais</a>
+    <a href="#mentais">Saúde Mental</a>
     <button onclick="toggleDark()">Modo Escuro</button>
   </nav>
 </header>
 
-<section class="banner">
-  <h2>Informação confiável sobre saúde</h2>
-  <p>Conteúdo educativo sobre doenças virais e saúde mental</p>
-</section>
-
 <div class="container">
 
-  <div class="card">
-    <h3>Doenças Virais</h3>
-    <p>Informações sobre infecções transmitidas por vírus.</p>
-    <a href="virais.html"><button>Ver mais</button></a>
-  </div>
+<div class="search-box">
+  <input type="text" id="search" onkeyup="searchCards()" placeholder="Pesquisar doença...">
+</div>
 
-  <div class="card">
-    <h3>Saúde Mental</h3>
-    <p>Conheça transtornos mentais e formas de cuidado.</p>
-    <a href="mentais.html"><button>Ver mais</button></a>
-  </div>
+<h2 id="virais">Doenças Virais</h2>
+
+<div class="card">
+<h3>Gripe (Influenza)</h3>
+<p>Infecção respiratória causada por vírus que pode provocar febre alta, dores no corpo e complicações pulmonares.</p>
+</div>
+
+<div class="card">
+<h3>COVID-19</h3>
+<p>Doença respiratória que pode atingir pulmões e vasos sanguíneos, podendo causar complicações graves.</p>
+</div>
+
+<div class="card">
+<h3>Dengue</h3>
+<p>Transmitida pelo mosquito Aedes aegypti, causa febre alta e dores intensas no corpo.</p>
+</div>
+
+<div class="card">
+<h3>HIV/AIDS</h3>
+<p>Vírus que ataca o sistema imunológico, reduzindo as defesas do organismo.</p>
+</div>
+
+<div class="card">
+<h3>Hepatite B</h3>
+<p>Infecção viral que afeta o fígado e pode causar inflamação crônica.</p>
+</div>
+
+<div class="card">
+<h3>HPV</h3>
+<p>Vírus que pode causar verrugas e alguns tipos de câncer.</p>
+</div>
+
+<div class="card">
+<h3>Raiva</h3>
+<p>Transmitida por mordida de animal infectado, afeta o sistema nervoso.</p>
+</div>
+
+<h2 id="mentais">Saúde Mental</h2>
+
+<div class="card">
+<h3>Depressão</h3>
+<p>Transtorno caracterizado por tristeza persistente, perda de interesse e alterações no sono e apetite.</p>
+</div>
+
+<div class="card">
+<h3>Ansiedade Generalizada</h3>
+<p>Preocupação excessiva constante que interfere na rotina diária.</p>
+</div>
+
+<div class="card">
+<h3>Transtorno Bipolar</h3>
+<p>Caracterizado por mudanças intensas de humor entre euforia e depressão.</p>
+</div>
+
+<div class="card">
+<h3>Esquizofrenia</h3>
+<p>Transtorno mental que afeta percepção da realidade, pensamento e comportamento.</p>
+</div>
+
+<div class="card">
+<h3>Transtorno do Pânico</h3>
+<p>Crises repentinas de medo intenso acompanhadas de sintomas físicos.</p>
+</div>
+
+<div class="card">
+<h3>TDAH</h3>
+<p>Transtorno de déficit de atenção e hiperatividade comum na infância e adolescência.</p>
+</div>
 
 </div>
 
