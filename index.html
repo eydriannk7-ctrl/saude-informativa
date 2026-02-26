@@ -3,63 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Saúde</title>
+<title>Portal Saúde Informativa</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    transition: 0.3s;
+:root{
+    --azul:#0f172a;
+    --azul-claro:#1e293b;
+    --verde:#0ea5e9;
+    --fundo:#f1f5f9;
+    --texto:#111827;
+    --card:#ffffff;
 }
 
-header {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+.dark{
+    --fundo:#0f172a;
+    --texto:#f1f5f9;
+    --card:#1e293b;
 }
 
-nav {
-    text-align: center;
-    padding: 10px;
-    background-color: #2563eb;
+body{
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+    transition:0.3s;
 }
 
-nav button {
-    padding: 8px 15px;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 5px;
+header{
+    background:var(--azul);
+    color:white;
+    padding:20px;
+    text-align:center;
 }
 
-.container {
-    padding: 20px;
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:var(--azul-claro);
 }
 
-input {
-    padding: 8px;
-    width: 250px;
-    margin-bottom: 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.card {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+.search-box{
+    text-align:center;
+    margin:20px;
 }
 
-.dark {
-    background-color: #111827;
-    color: white;
+input{
+    padding:10px;
+    width:300px;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
 
-.dark .card {
-    background-color: #1f2937;
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:var(--verde);
+    color:white;
+    font-weight:bold;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    margin:15px 0;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+h2{
+    border-bottom:2px solid var(--verde);
+    padding-bottom:5px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--azul);
+    color:white;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -68,43 +110,95 @@ input {
 
 <header>
     <h1>Portal Saúde Informativa</h1>
-    <p>Doenças Virais e Saúde Mental</p>
+    <p>Informações educativas sobre doenças virais e saúde mental</p>
 </header>
 
 <nav>
+    <a href="#virais">Doenças Virais</a>
+    <a href="#mentais">Saúde Mental</a>
     <button onclick="toggleDark()">Modo Escuro</button>
 </nav>
 
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Pesquisar doença...">
+</div>
+
 <div class="container">
 
-<input type="text" id="searchInput" placeholder="Pesquisar doença...">
+<h2 id="virais">Doenças Virais</h2>
 
 <div class="card">
 <h3>Gripe (Influenza)</h3>
-<p>Infecção respiratória causada por vírus.</p>
+<p>Infecção respiratória causada por vírus que afeta nariz, garganta e pulmões. Pode causar febre alta e dores no corpo.</p>
 </div>
 
 <div class="card">
 <h3>COVID-19</h3>
-<p>Doença respiratória que pode causar complicações graves.</p>
+<p>Doença respiratória que pode atingir pulmões e vasos sanguíneos, podendo causar complicações graves.</p>
 </div>
 
 <div class="card">
 <h3>Dengue</h3>
-<p>Transmitida pelo mosquito Aedes aegypti.</p>
+<p>Transmitida pelo mosquito Aedes aegypti. Pode causar febre alta, dor no corpo e complicações hemorrágicas.</p>
 </div>
+
+<div class="card">
+<h3>HIV/AIDS</h3>
+<p>Vírus que ataca o sistema imunológico, enfraquecendo as defesas do corpo.</p>
+</div>
+
+<div class="card">
+<h3>Hepatite B</h3>
+<p>Vírus que afeta o fígado e pode causar inflamação crônica.</p>
+</div>
+
+<div class="card">
+<h3>HPV</h3>
+<p>Vírus que pode causar verrugas e alguns tipos de câncer.</p>
+</div>
+
+<div class="card">
+<h3>Raiva</h3>
+<p>Doença viral transmitida por mordida de animal infectado que afeta o sistema nervoso.</p>
+</div>
+
+<h2 id="mentais">Doenças Mentais</h2>
 
 <div class="card">
 <h3>Depressão</h3>
-<p>Transtorno caracterizado por tristeza persistente.</p>
+<p>Transtorno caracterizado por tristeza persistente, perda de interesse e alterações no sono e apetite.</p>
 </div>
 
 <div class="card">
-<h3>Ansiedade</h3>
-<p>Preocupação excessiva e constante.</p>
+<h3>Ansiedade Generalizada</h3>
+<p>Preocupação excessiva e constante que interfere na rotina diária.</p>
+</div>
+
+<div class="card">
+<h3>Transtorno Bipolar</h3>
+<p>Caracterizado por mudanças intensas de humor entre euforia e depressão.</p>
+</div>
+
+<div class="card">
+<h3>Esquizofrenia</h3>
+<p>Transtorno mental grave que afeta percepção da realidade, pensamento e comportamento.</p>
+</div>
+
+<div class="card">
+<h3>Transtorno do Pânico</h3>
+<p>Episódios repentinos de medo intenso acompanhados de sintomas físicos.</p>
+</div>
+
+<div class="card">
+<h3>TDAH</h3>
+<p>Transtorno de déficit de atenção e hiperatividade, comum na infância e adolescência.</p>
 </div>
 
 </div>
+
+<footer>
+    Portal Saúde Informativa - Conteúdo educativo
+</footer>
 
 <script>
 function toggleDark(){
@@ -119,7 +213,7 @@ document.getElementById("searchInput").addEventListener("keyup", function(){
         let texto = card.innerText.toLowerCase();
         if(texto.includes(filtro)){
             card.style.display = "block";
-        } else {
+        }else{
             card.style.display = "none";
         }
     });
