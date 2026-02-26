@@ -82,3 +82,23 @@ footer {
     border-radius: 6px;
     font-weight: bold;
 }
+.accordion-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background-color: var(--cor-principal);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: var(--cor-card);
+    border-radius: 6px;
+    margin-top: 5px;
+}
