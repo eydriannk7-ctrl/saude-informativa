@@ -1,53 +1,209 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Doenças Virais</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doenças Virais</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color: #1e3a8a;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3{
+    color: #2563eb;
+}
+
+ul{
+    margin-left: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #1e3a8a;
+    color: white;
+    margin-top: 30px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Doenças Transmitidas por Vírus</h1>
-
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="virus.html">Doenças Virais</a>
-        <a href="mental.html">Saúde Mental</a>
-    </nav>
-
-    <div class="controls">
-        <input type="text" id="searchInput" placeholder="Pesquisar...">
-        <button onclick="searchContent()">Buscar</button>
-        <button onclick="toggleDarkMode()">🌙</button>
-    </div>
 </header>
 
-<section class="searchable">
-    <h2>Gripe (Influenza)</h2>
-    <p>A gripe é uma infecção respiratória causada pelo vírus influenza. Ela é transmitida principalmente por gotículas liberadas ao falar, tossir ou espirrar.</p>
-    <p><strong>Sintomas:</strong> febre, dor de cabeça, dor no corpo, tosse e cansaço.</p>
-    <p><strong>Prevenção:</strong> vacinação anual, higiene das mãos e evitar contato com pessoas doentes.</p>
+<section>
+<h2>Doenças Respiratórias</h2>
+
+<h3>Gripe (Influenza)</h3>
+<p><strong>Como age no corpo:</strong> O vírus invade as células das vias respiratórias (nariz, garganta e pulmões), se multiplica rapidamente e provoca inflamação intensa.</p>
+<p><strong>Riscos:</strong> Pode evoluir para pneumonia, principalmente em idosos, crianças pequenas e pessoas com doenças crônicas.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Vacina anual</li>
+<li>Lavar as mãos com frequência</li>
+<li>Evitar contato próximo com pessoas doentes</li>
+<li>Boa alimentação e sono adequado</li>
+</ul>
+
+<h3>Resfriado Comum</h3>
+<p><strong>Como age:</strong> Ataca principalmente o nariz e a garganta, causando inflamação leve.</p>
+<p><strong>Riscos:</strong> Geralmente leve, raramente grave.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Higiene das mãos</li>
+<li>Não compartilhar objetos pessoais</li>
+<li>Evitar levar mãos aos olhos e boca</li>
+</ul>
+
+<h3>COVID-19</h3>
+<p><strong>Como age:</strong> Pode atingir pulmões e vasos sanguíneos, causando inflamação intensa.</p>
+<p><strong>Riscos:</strong> Pneumonia grave, problemas cardíacos e sequelas prolongadas.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Vacinação completa</li>
+<li>Ventilação de ambientes</li>
+<li>Uso de máscara em locais fechados lotados</li>
+<li>Higiene das mãos</li>
+</ul>
+
+<h3>Sarampo</h3>
+<p><strong>Como age:</strong> Espalha-se pelo corpo após entrar pelo sistema respiratório.</p>
+<p><strong>Riscos:</strong> Encefalite e morte.</p>
+<p><strong>Prevenção:</strong> Vacina tríplice viral.</p>
+
+<h3>Caxumba</h3>
+<p><strong>Como age:</strong> Ataca glândulas salivares e pode atingir sistema nervoso.</p>
+<p><strong>Riscos:</strong> Possível infertilidade masculina (raro).</p>
+<p><strong>Prevenção:</strong> Vacina tríplice viral.</p>
+
+<h3>Rubéola</h3>
+<p><strong>Como age:</strong> Leve em adultos, perigosa na gravidez.</p>
+<p><strong>Riscos:</strong> Malformações graves no bebê.</p>
+<p><strong>Prevenção:</strong> Vacinação antes da gravidez.</p>
+
+<h3>Catapora (Varicela)</h3>
+<p><strong>Como age:</strong> Causa lesões na pele com líquido.</p>
+<p><strong>Prevenção:</strong> Vacina e evitar contato com infectados.</p>
+
+<h3>Bronquiolite</h3>
+<p><strong>Como age:</strong> Inflama os bronquíolos, dificultando a respiração em bebês.</p>
+<p><strong>Prevenção:</strong> Higiene das mãos e evitar exposição a gripados.</p>
 </section>
 
-<section class="searchable">
-    <h2>COVID-19</h2>
-    <p>Doença causada pelo vírus SARS-CoV-2. Pode afetar o sistema respiratório e, em casos graves, outros órgãos.</p>
-    <p><strong>Sintomas:</strong> febre, tosse, falta de ar, perda de olfato e paladar.</p>
-    <p><strong>Prevenção:</strong> vacinação, higiene das mãos e ambientes ventilados.</p>
+<section>
+<h2>Doenças Sexualmente Transmissíveis</h2>
+
+<h3>HIV/AIDS</h3>
+<p><strong>Como age:</strong> Ataca células de defesa do organismo.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Uso de preservativo</li>
+<li>Não compartilhar seringas</li>
+<li>Testagem regular</li>
+</ul>
+
+<h3>Hepatites B e C</h3>
+<p><strong>Como agem:</strong> Atacam o fígado e podem causar inflamação crônica.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Vacina (Hepatite B)</li>
+<li>Preservativo</li>
+<li>Não compartilhar objetos cortantes</li>
+</ul>
+
+<h3>HPV</h3>
+<p><strong>Como age:</strong> Pode causar verrugas e câncer.</p>
+<p><strong>Prevenção:</strong> Vacina HPV e preservativo.</p>
+
+<h3>Herpes Genital</h3>
+<p><strong>Como age:</strong> Permanece no corpo podendo reativar.</p>
+<p><strong>Prevenção:</strong> Preservativo e evitar contato durante lesões.</p>
 </section>
 
-<section class="searchable">
-    <h2>Sarampo</h2>
-    <p>Doença viral altamente contagiosa transmitida pelo ar.</p>
-    <p><strong>Sintomas:</strong> febre alta, manchas vermelhas pelo corpo, tosse e irritação nos olhos.</p>
-    <p><strong>Prevenção:</strong> vacina tríplice viral.</p>
+<section>
+<h2>Doenças Transmitidas por Mosquito</h2>
+
+<h3>Dengue, Zika e Chikungunya</h3>
+<p><strong>Como agem:</strong> Entram na corrente sanguínea após picada do mosquito.</p>
+<p><strong>Prevenção:</strong></p>
+<ul>
+<li>Eliminar água parada</li>
+<li>Usar repelente</li>
+<li>Telas em janelas</li>
+</ul>
+
+<h3>Febre Amarela</h3>
+<p><strong>Como age:</strong> Afeta o fígado e pode causar hemorragia.</p>
+<p><strong>Prevenção:</strong> Vacina.</p>
+</section>
+
+<section>
+<h2>Sistema Nervoso</h2>
+
+<h3>Raiva</h3>
+<p><strong>Como age:</strong> Viaja pelos nervos até o cérebro.</p>
+<p><strong>Risco:</strong> Quase sempre fatal após sintomas.</p>
+<p><strong>Prevenção:</strong> Vacinar animais e procurar atendimento após mordida.</p>
+
+<h3>Poliomielite</h3>
+<p><strong>Como age:</strong> Pode atingir nervos que controlam músculos.</p>
+<p><strong>Prevenção:</strong> Vacina.</p>
+</section>
+
+<section>
+<h2>Doenças Graves</h2>
+
+<h3>Ebola</h3>
+<p><strong>Como age:</strong> Afeta vasos sanguíneos e órgãos.</p>
+<p><strong>Prevenção:</strong> Evitar contato com fluidos contaminados.</p>
+
+<h3>Mpox</h3>
+<p><strong>Prevenção:</strong> Evitar contato com lesões e manter higiene.</p>
+</section>
+
+<section>
+<h2>Prevenção Geral Contra Vírus</h2>
+<ul>
+<li>Manter vacinas em dia</li>
+<li>Lavar as mãos com frequência</li>
+<li>Usar preservativo</li>
+<li>Combater mosquitos</li>
+<li>Procurar atendimento ao notar sintomas graves</li>
+<li>Alimentação equilibrada e sono adequado</li>
+</ul>
 </section>
 
 <footer>
-    <p>Informações educativas baseadas em órgãos de saúde.</p>
+    <p>Site Educativo sobre Doenças Virais</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
