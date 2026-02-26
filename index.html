@@ -3,102 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Saúde Informativa</title>
-<link rel="stylesheet" href="style.css">
+<title>Portal Saúde</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: 0.3s;
+}
+
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background-color: #2563eb;
+}
+
+nav button {
+    padding: 8px 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.dark {
+    background-color: #111827;
+    color: white;
+}
+
+.dark .card {
+    background-color: #1f2937;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Portal Saúde Informativa</h1>
-  <nav>
-    <a href="#virais">Doenças Virais</a>
-    <a href="#mentais">Saúde Mental</a>
-    <button onclick="toggleDark()">Modo Escuro</button>
-  </nav>
+    <h1>Portal Saúde Informativa</h1>
+    <p>Doenças Virais e Saúde Mental</p>
 </header>
+
+<nav>
+    <button onclick="toggleDark()">Modo Escuro</button>
+</nav>
 
 <div class="container">
 
-<div class="search-box">
-  <input type="text" id="search" onkeyup="searchCards()" placeholder="Pesquisar doença...">
-</div>
-
-<h2 id="virais">Doenças Virais</h2>
+<input type="text" id="searchInput" placeholder="Pesquisar doença...">
 
 <div class="card">
 <h3>Gripe (Influenza)</h3>
-<p>Infecção respiratória causada por vírus que pode provocar febre alta, dores no corpo e complicações pulmonares.</p>
+<p>Infecção respiratória causada por vírus.</p>
 </div>
 
 <div class="card">
 <h3>COVID-19</h3>
-<p>Doença respiratória que pode atingir pulmões e vasos sanguíneos, podendo causar complicações graves.</p>
+<p>Doença respiratória que pode causar complicações graves.</p>
 </div>
 
 <div class="card">
 <h3>Dengue</h3>
-<p>Transmitida pelo mosquito Aedes aegypti, causa febre alta e dores intensas no corpo.</p>
+<p>Transmitida pelo mosquito Aedes aegypti.</p>
 </div>
-
-<div class="card">
-<h3>HIV/AIDS</h3>
-<p>Vírus que ataca o sistema imunológico, reduzindo as defesas do organismo.</p>
-</div>
-
-<div class="card">
-<h3>Hepatite B</h3>
-<p>Infecção viral que afeta o fígado e pode causar inflamação crônica.</p>
-</div>
-
-<div class="card">
-<h3>HPV</h3>
-<p>Vírus que pode causar verrugas e alguns tipos de câncer.</p>
-</div>
-
-<div class="card">
-<h3>Raiva</h3>
-<p>Transmitida por mordida de animal infectado, afeta o sistema nervoso.</p>
-</div>
-
-<h2 id="mentais">Saúde Mental</h2>
 
 <div class="card">
 <h3>Depressão</h3>
-<p>Transtorno caracterizado por tristeza persistente, perda de interesse e alterações no sono e apetite.</p>
+<p>Transtorno caracterizado por tristeza persistente.</p>
 </div>
 
 <div class="card">
-<h3>Ansiedade Generalizada</h3>
-<p>Preocupação excessiva constante que interfere na rotina diária.</p>
-</div>
-
-<div class="card">
-<h3>Transtorno Bipolar</h3>
-<p>Caracterizado por mudanças intensas de humor entre euforia e depressão.</p>
-</div>
-
-<div class="card">
-<h3>Esquizofrenia</h3>
-<p>Transtorno mental que afeta percepção da realidade, pensamento e comportamento.</p>
-</div>
-
-<div class="card">
-<h3>Transtorno do Pânico</h3>
-<p>Crises repentinas de medo intenso acompanhadas de sintomas físicos.</p>
-</div>
-
-<div class="card">
-<h3>TDAH</h3>
-<p>Transtorno de déficit de atenção e hiperatividade comum na infância e adolescência.</p>
+<h3>Ansiedade</h3>
+<p>Preocupação excessiva e constante.</p>
 </div>
 
 </div>
 
-<footer>
-Portal Saúde Informativa - Conteúdo Educativo
-</footer>
+<script>
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
 
-<script src="script.js"></script>
+document.getElementById("searchInput").addEventListener("keyup", function(){
+    let filtro = this.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+        let texto = card.innerText.toLowerCase();
+        if(texto.includes(filtro)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
 </body>
 </html>
