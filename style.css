@@ -74,3 +74,7 @@ footer {
 .dark-mode footer {
     background-color: #000;
 }
+h3 {
+    color: #3aafa9;
+    margin-top: 15px;
+}
