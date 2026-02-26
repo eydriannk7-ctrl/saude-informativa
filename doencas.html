@@ -1,150 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doenças - Portal Saúde</title>
-<link rel="stylesheet" href="style.css">
+<title>Doenças | Portal Saúde</title>
+
+<style>
+:root {
+    --cor-principal: #00bcd4;
+    --fundo: #f4f9fb;
+    --texto: #333;
+    --card: white;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --fundo: #0f1a1f;
+    --texto: #f1f1f1;
+    --card: #1e2a30;
+}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+header {
+    background: var(--cor-principal);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+.busca {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.busca input, .busca select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--cor-principal);
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Portal Saúde</h1>
-    <a href="index.html" class="btn">← Voltar</a>
+<h1>Portal Saúde - Doenças</h1>
 </header>
 
-<main>
+<div class="container">
 
-<section class="card">
-<h2>🫁 Doenças Respiratórias</h2>
-
-<h3>Gripe (Influenza)</h3>
-<p><strong>Como age:</strong> Invade vias respiratórias e causa inflamação intensa.</p>
-<p><strong>Riscos:</strong> Pode evoluir para pneumonia.</p>
-<p><strong>Prevenção:</strong> Vacina anual, higiene das mãos, boa alimentação.</p>
-
-<h3>Resfriado</h3>
-<p>Inflamação leve no nariz e garganta. Geralmente leve.</p>
-
-<h3>COVID-19</h3>
-<p>Pode afetar pulmões e vasos sanguíneos. Vacinação é essencial.</p>
-
-<h3>Sarampo, Caxumba e Rubéola</h3>
-<p>Prevenção principal: vacina tríplice viral.</p>
-
-<h3>Catapora</h3>
-<p>Prevenção com vacina.</p>
-
-<h3>Bronquiolite</h3>
-<p>Afeta bebês, inflama vias pequenas do pulmão.</p>
-
-</section>
-
-<section class="card">
-<h2>🩸 Doenças Sexualmente Transmissíveis</h2>
-
-<h3>HIV/AIDS</h3>
-<p>Ataca sistema imunológico. Uso de preservativo é fundamental.</p>
-
-<h3>Hepatites B e C</h3>
-<p>Afetam o fígado. Hepatite B tem vacina.</p>
-
-<h3>HPV</h3>
-<p>Pode causar câncer. Vacinação reduz risco.</p>
-
-<h3>Herpes Genital</h3>
-<p>Pode reativar em momentos de estresse.</p>
-
-</section>
-
-<section class="card">
-<h2>🦟 Doenças por Mosquito</h2>
-<p>Dengue, Zika, Chikungunya e Febre Amarela.</p>
-<p>Prevenção: eliminar água parada e usar repelente.</p>
-</section>
-
-<section class="card">
-<h2>🧠 Transtornos Mentais</h2>
-
-<div class="accordion">
-
-<button class="accordion-btn">Transtornos do Neurodesenvolvimento</button>
-<div class="accordion-content">
-<p><strong>TEA:</strong> Déficits na comunicação social e comportamentos repetitivos.</p>
-<p><strong>TDAH:</strong> Desatenção, hiperatividade e impulsividade.</p>
-<p><strong>Deficiência Intelectual:</strong> Prejuízo em funcionamento intelectual e adaptativo.</p>
-<p><strong>Transtornos de Aprendizagem:</strong> Dislexia, Discalculia, Disgrafia.</p>
+<div class="busca">
+<input type="text" id="search" placeholder="Buscar doença...">
+<select id="filtro">
+<option value="todas">Todas Categorias</option>
+<option value="mental">Mentais</option>
+<option value="cardio">Cardiovasculares</option>
+<option value="metabolica">Metabólicas</option>
+<option value="infecciosa">Infecciosas</option>
+</select>
 </div>
 
-<button class="accordion-btn">Transtornos Psicóticos</button>
-<div class="accordion-content">
-<p><strong>Esquizofrenia:</strong> Alterações na percepção da realidade.</p>
-<p><strong>Transtorno Esquizoafetivo</strong></p>
-<p><strong>Transtorno Delirante</strong></p>
-<p><strong>Psicótico Breve</strong></p>
+<div class="grid" id="lista">
+
+<div class="card" data-categoria="mental">
+<h3>Depressão</h3>
+<a href="depressao.html">Ver detalhes</a>
 </div>
 
-<button class="accordion-btn">Transtornos do Humor</button>
-<div class="accordion-content">
-<p><strong>Depressão Maior</strong></p>
-<p><strong>Transtorno Bipolar</strong></p>
-<p><strong>Distimia</strong></p>
+<div class="card" data-categoria="mental">
+<h3>Ansiedade</h3>
+<a href="ansiedade.html">Ver detalhes</a>
 </div>
 
-<button class="accordion-btn">Transtornos de Ansiedade</button>
-<div class="accordion-content">
-<p>TAG, Pânico, Fobias, Ansiedade Social, Agorafobia.</p>
+<div class="card" data-categoria="cardio">
+<h3>Hipertensão</h3>
+<a href="hipertensao.html">Ver detalhes</a>
 </div>
 
-<button class="accordion-btn">TOC e Relacionados</button>
-<div class="accordion-content">
-<p>TOC, Transtorno de Acumulação, Tricotilomania.</p>
+<div class="card" data-categoria="metabolica">
+<h3>Diabetes</h3>
+<a href="diabetes.html">Ver detalhes</a>
 </div>
 
-<button class="accordion-btn">Transtornos Relacionados a Trauma</button>
-<div class="accordion-content">
-<p>TEPT e Estresse Agudo.</p>
-</div>
-
-<button class="accordion-btn">Transtornos Alimentares</button>
-<div class="accordion-content">
-<p>Anorexia, Bulimia, Compulsão Alimentar.</p>
-</div>
-
-<button class="accordion-btn">Transtornos de Personalidade</button>
-<div class="accordion-content">
-<p>Borderline, Narcisista, Antissocial, Esquiva, Dependente.</p>
-</div>
-
-<button class="accordion-btn">Transtornos do Sono</button>
-<div class="accordion-content">
-<p>Insônia, Narcolepsia, Parassonias.</p>
-</div>
-
-<button class="accordion-btn">Outras Condições</button>
-<div class="accordion-content">
-<p>Disforia de Gênero, Transtornos de Adaptação, Neurocognitivos.</p>
+<div class="card" data-categoria="infecciosa">
+<h3>Dengue</h3>
+<a href="dengue.html">Ver detalhes</a>
 </div>
 
 </div>
 
-<p><strong>Importante:</strong> Todos esses transtornos possuem tratamento e acompanhamento profissional pode melhorar significativamente a qualidade de vida.</p>
+</div>
 
-</section>
+<script>
+const search = document.getElementById("search");
+const filtro = document.getElementById("filtro");
+const cards = document.querySelectorAll(".card");
 
-<section class="card">
-<h2>🔐 Prevenção Geral</h2>
-<ul>
-<li>💉 Vacinas em dia</li>
-<li>🧼 Higiene frequente</li>
-<li>🛡️ Uso de preservativo</li>
-<li>🦟 Combate ao mosquito</li>
-<li>🍎 Boa alimentação e sono</li>
-</ul>
-</section>
+function filtrar() {
+    const termo = search.value.toLowerCase();
+    const categoria = filtro.value;
 
-</main>
+    cards.forEach(card => {
+        const titulo = card.querySelector("h3").textContent.toLowerCase();
+        const cat = card.dataset.categoria;
 
-<script src="script.js"></script>
+        const correspondeBusca = titulo.includes(termo);
+        const correspondeCategoria = categoria === "todas" || categoria === cat;
+
+        card.style.display = correspondeBusca && correspondeCategoria ? "block" : "none";
+    });
+}
+
+search.addEventListener("input", filtrar);
+filtro.addEventListener("change", filtrar);
+</script>
+
 </body>
 </html>
