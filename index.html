@@ -41,6 +41,13 @@ nav{
   padding:10px;
 }
 
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+}
+
 nav button{
   padding:8px 15px;
   border:none;
@@ -52,18 +59,6 @@ nav button{
   max-width:1000px;
   margin:auto;
   padding:20px;
-}
-
-h2{
-  border-bottom:2px solid var(--secondary);
-  padding-bottom:5px;
-  margin-top:40px;
-}
-
-input{
-  padding:8px;
-  width:250px;
-  margin:20px 0;
 }
 
 .card{
@@ -88,54 +83,20 @@ footer{
 
 <header>
   <h1>Portal Saúde Informativa</h1>
-  <p>Informações educativas sobre doenças e saúde mental</p>
+  <p>Informações educativas sobre saúde</p>
 </header>
 
 <nav>
+  <a href="index.html">Início</a>
+  <a href="doencas.html">Doenças</a>
   <button onclick="toggleDark()">Modo Escuro</button>
 </nav>
 
 <div class="container">
 
-<input type="text" id="searchInput" placeholder="Pesquisar doença ou tema...">
-
-<h2>Doenças Virais</h2>
-
+<h2>Bem-vindo</h2>
 <div class="card">
-<h3>Gripe (Influenza)</h3>
-<p>Infecção respiratória causada por vírus que pode provocar febre alta e dores no corpo.</p>
-</div>
-
-<div class="card">
-<h3>COVID-19</h3>
-<p>Doença respiratória que pode atingir pulmões e causar complicações graves.</p>
-</div>
-
-<div class="card">
-<h3>Dengue</h3>
-<p>Transmitida pelo mosquito Aedes aegypti, causa febre alta e dores intensas.</p>
-</div>
-
-<div class="card">
-<h3>HIV/AIDS</h3>
-<p>Vírus que ataca o sistema imunológico.</p>
-</div>
-
-<h2>Saúde Mental</h2>
-
-<div class="card">
-<h3>Depressão</h3>
-<p>Tristeza persistente, perda de interesse e alterações no sono.</p>
-</div>
-
-<div class="card">
-<h3>Ansiedade</h3>
-<p>Preocupação excessiva e constante.</p>
-</div>
-
-<div class="card">
-<h3>Transtorno Bipolar</h3>
-<p>Alternância entre episódios de euforia e depressão.</p>
+<p>Este portal foi criado para fornecer informações educativas sobre doenças virais e saúde mental.</p>
 </div>
 
 <h2>Contatos de Profissionais da Saúde</h2>
@@ -151,18 +112,8 @@ footer{
 </div>
 
 <div class="card">
-<h3>Psicólogo Plantão 24h</h3>
-<p>Telefone: (11) 4000-3000</p>
-</div>
-
-<div class="card">
 <h3>Emergência SAMU</h3>
 <p>Telefone: 192</p>
-</div>
-
-<h2>Aviso Importante</h2>
-<div class="card">
-<p>Este site possui caráter informativo e não substitui consulta médica profissional. Em caso de sintomas graves ou emergência, procure atendimento médico imediatamente.</p>
 </div>
 
 </div>
@@ -175,16 +126,6 @@ Portal Saúde Informativa - Conteúdo Educativo
 function toggleDark(){
   document.body.classList.toggle("dark");
 }
-
-document.getElementById("searchInput").addEventListener("keyup", function(){
-  let filtro = this.value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(function(card){
-    let texto = card.innerText.toLowerCase();
-    card.style.display = texto.includes(filtro) ? "block" : "none";
-  });
-});
 </script>
 
 </body>
