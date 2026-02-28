@@ -1,10 +1,15 @@
-# Saúde Informativa
+# 🏥 Portal Saúde
 
-Site educativo sobre doenças virais e saúde mental.
+Site profissional de informações sobre doenças, prevenção e contato com profissionais da saúde.
 
-## Objetivo
-Fornecer informações claras e baseadas em fontes confiáveis.
+Projeto desenvolvido em HTML, CSS e JavaScript puro, com:
 
-## Tecnologias
-- HTML
-- CSS#
+- ✅ Páginas individuais para cada doença
+- ✅ Sistema de login para painel administrativo
+- ✅ Modo escuro automático
+- ✅ Estrutura organizada em pastas
+- ✅ Suporte a PWA (manifest.json)
+
+---
+
+# 📂 Estrutura do Projeto

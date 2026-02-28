@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Administrativo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="verificarLogin()">
+
+<header class="header">
+  <h1>Painel Administrativo</h1>
+  <button onclick="logout()">Sair</button>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Estatísticas</h2>
+    <p>Total de Doenças cadastradas: 5</p>
+    <p>Profissionais cadastrados: 4</p>
+  </section>
+
+  <section class="card">
+    <h2>Gerenciar Conteúdo</h2>
+    <ul>
+      <li><a href="doencas.html">Editar Doenças</a></li>
+      <li><a href="profissionais.html">Editar Profissionais</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
